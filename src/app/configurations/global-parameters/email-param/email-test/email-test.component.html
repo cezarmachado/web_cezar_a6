@@ -1,0 +1,29 @@
+<div role="form" [formGroup]="testEmailForm" novalidate>
+  <div class="box-body" class="col-xs-12 col-sm-12 col-md-6">
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <div class="form-group">
+        <label for="mailTo">Destinatário</label>
+        <input id="mailTo" class="form-control" formControlName="mailTo" placeholder="Para:"/>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <div class="form-group">
+        <label for="mailSubject">Assunto</label>
+        <input id="mailSubject" class="form-control" formControlName="mailSubject" placeholder="Assunto"/>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <div class="form-group">
+        <label for="mailBody">Mensagem</label>
+        <!--input id="mailBody" class="form-control" formControlName="mailBody" placeholder="Assunto"/-->
+        <textarea class="form-control" rows="3" formControlName="mailBody" placeholder="Mensagem"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-footer col-xs-12" >
+    <button class="btn btn-primary"   (click)="sendTest()"> Enviar</button>
+    <button class="btn btn-default"   [routerLink]="['/home/paramGlobal']"> voltar</button>
+    <button class="btn btn-default"   [routerLink]="['/home']"> Cancelar</button>
+  </div>
+</div>

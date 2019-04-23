@@ -1,0 +1,28 @@
+<div role="form" [formGroup]="globalParamForm" novalidate>
+  <div class="box-body" class="col-xs-12 col-sm-12 col-md-6">
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <div class="form-group">
+        <label for="mailService">Serviço de Email</label>
+        <input id="mailService" class="form-control" formControlName="mailService" placeholder="Serviço"/>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <div class="form-group">
+        <label for="mailUserName">Remetente do Sistema</label>
+        <input id="mailUserName" class="form-control" formControlName="mailUserName" placeholder="Nome de usuário"/>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <div class="form-group">
+        <label for="mailPassword">Senha do E-mail</label>
+        <input id="mailPassword" class="form-control" formControlName="mailPassword" placeholder="Senha" type="password"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-footer col-xs-12" >
+    <button class="btn btn-primary"   (click)="updateParamEmail(globalParamForm.value)"> Salvar</button>
+    <button class="btn btn-default"   [routerLink]="['/home/emailTest']"> Testar</button>
+    <button class="btn btn-default"   [routerLink]="['/home']"> Cancelar</button>
+  </div>
+</div>

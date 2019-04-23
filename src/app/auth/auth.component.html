@@ -1,0 +1,29 @@
+<body>
+	<div class="login-box">
+		<div class="login-logo">
+			<i class='fa fa-industry'></i>
+			<b>web</b>CEZAR</div>
+		<div class="login-box-body">
+			<p class="login-box-msg">Bem vindo!</p>
+			<form [formGroup]="authForm" novalidate>
+				<div class="form-group has-feedback">
+					<input id="authEmail" class="form-control" formControlName="email" placeholder="Informe o E-mail" type="email" />
+					<span class="glyphicon glyphicon-user form-control-feedback"></span>
+				</div>
+				<div class="form-group has-feedback">
+					<input id="authPass" class="form-control" formControlName="password" placeholder="Informe a Senha" type="password" />
+					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-4">
+						<button *ngIf="member" id="logIn" (click)="logIn(authForm.value)" class="btn btn-primary btn-block btn-flat">Entrar</button>
+					</div>
+				</div>
+			</form>
+			<br />
+			
+			<div *ngIf="error" class="alert alert-danger">{{error}}</div>
+		</div>
+	</div>
+</body>

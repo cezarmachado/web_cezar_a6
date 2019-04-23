@@ -1,0 +1,10 @@
+{
+  "/dts/*": {
+    "target": "https://portal-teste.vipal.com.br/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
+
+

@@ -1,0 +1,16 @@
+<div role="form" [formGroup]="profileForm" novalidate>
+  
+  <div class="box-body" >
+    <div class="col-xs-12 col-sm-9 col-md-9">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input id="email" class="form-control" formControlName="email" placeholder="informe o E-mail"/>
+      </div>
+    </div>
+  </div>
+  <div class="box-footer col-xs-12" >
+    <button class="btn btn-info" (click)="updateProfile(user)"> Salvar</button>
+    <button class="btn btn-default"   [routerLink]="['/home']"> Cancelar</button>
+  </div>
+
+</div>

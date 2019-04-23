@@ -1,0 +1,15 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col-sm-10">Ordem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ord of ords">
+      <td>{{ord.cod_unid_organ_ext}}</td>
+      <td>{{ord.cod_unid_organ}}</td>
+      <td>{{ord.nom_abrev}}</td>
+      <td>{{ord.des_unid_organ}}</td>
+    </tr>
+  </tbody>
+</table>
